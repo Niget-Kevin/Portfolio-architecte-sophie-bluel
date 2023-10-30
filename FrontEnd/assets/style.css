@@ -57,7 +57,8 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 50px 0;	
+
 }
 section {
 	margin: 50px 0
@@ -124,7 +125,7 @@ li:hover {
 }
 #portfolio h2 {
 	text-align: center;
-	margin-bottom: 1em;
+	margin-bottom: 50px;
 }
 .gallery {
 	width: 100%;
@@ -132,12 +133,25 @@ li:hover {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	margin-top: 50px;
 }
 
 .gallery img {
 	width: 100%;
 
 }
+
+.btn-login ,.btn-contact {
+    font-family: 'Syne';
+    font-weight: 700;
+    color: white;
+    background-color: #1D6154;
+    margin: 2em auto;
+    width: 180px;
+    text-align: center;
+    border-radius: 60px;
+}
+
 /* rajour pour la mise en forme login */
 
 #contact ,#login {
@@ -185,7 +199,7 @@ li:hover {
 	margin-bottom: 355px;
 }
 
-input[type="submit"]{
+.js-modale-projet {
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
@@ -194,6 +208,8 @@ input[type="submit"]{
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
+	border: none;
+	cursor: pointer;
 }
 
 footer nav ul {
@@ -207,7 +223,7 @@ footer nav ul {
 	display: flex;
 	justify-content: center;	
 	gap: 10px;
-	margin:51px 0px 51px;
+	margin:0;
 }
 
 .filter__btn {
@@ -241,11 +257,7 @@ footer nav ul {
 	height: 37px;
 }
 
-.filter__btn:hover, .btn-admin:hover{
-	color: white;
-	background-color: #1D6154;
-	scale: 1;
-}
+
 
 .filter__btn--active, .btn-admin{
 	color: white;
@@ -261,3 +273,341 @@ nav a {
 nav a:hover {
     color: #B1663C;
 }
+
+.error {
+	display: grid;
+	margin: 30px 0;
+	text-align: center;
+	font-size: 16px;
+	color: red;
+}
+
+.error2 {
+	display: grid;
+	margin: 30px 0;
+	text-align: center;
+	font-size: 16px;
+	color: red;
+}
+
+.admin {	
+	justify-content: center;
+	gap: 21px;
+    position: fixed;
+    right: 0;
+    top: 0;      
+    width: 100%;
+    height: 59px;
+    background-color: black;    
+	align-items: center;	
+	margin-bottom: 38px;
+	color: white;
+}
+.admin__modifer {		
+	gap: 11px;
+	justify-content: center;
+	align-items: center;
+}
+
+figure .admin__modifer{
+	justify-content: flex-start;
+    margin-left: 10%;
+	margin-top: 15px;
+}
+
+#portfolio .portfolio-header { 
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio .admin__modifer {
+    margin-left: 31px;
+	margin-bottom: 28px;
+}
+.admin i.fa-pen-to-square{
+	color: white;
+}
+.edit {
+	width: 216px;
+	height: 38px;
+	border-radius: 60px;
+	color: #000;	
+	font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.admin a {
+	color: white;
+}
+
+.modal {
+	position: fixed;	
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+	background: rgba(0, 0, 0, 0.30);
+}
+
+.modal-wrapper {	
+	overflow: auto;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh - 20px);
+	width: 630px;
+    padding: 26px 30px 55px 30px;
+	background-color: white;
+	border-radius: 10px;
+	
+	
+}
+
+#titlemodal {
+	font-family: "Work Sans";
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30.5px;
+    color: #000;
+    text-align: center;   
+}
+
+.js-close-modal {
+	display: grid;	
+	align-items: center;
+	border: none;
+    background: none;
+	justify-content: end;
+	padding: 0;
+	
+}
+.js-back-modal {
+	background-color: white;	
+	border: none;
+	justify-items: start;
+	padding: 0;
+}
+.fa-xmark {
+	background-color: white;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+}
+
+
+#addProjectForm {
+	justify-items: center;
+	grid-template-columns: 1fr;
+}
+
+.form {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	grid-template-areas:
+    "b"
+    "a"
+    "d"
+    "c";
+	padding-bottom: 47px;
+	border-bottom: 1px solid #B3B3B3;
+}
+
+label[for="projectTitle"] {
+	grid-area: b;
+
+}
+
+label[for="projectCategory"] {
+	grid-area: d;
+	margin-top: 21px;
+}
+
+label[for="projectCategory"], label[for="projectTitle"] {
+	
+	margin-bottom: 10px;
+	justify-self: start;
+	color: #3D3D3D;
+	font-family:'Work Sans';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.pictureFormat {
+	color: #444;
+	text-align: center;
+	font-family:'Work Sans';
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+#projectCategory, #projectTitle {
+	width: 420px;
+height: 51px;
+flex-shrink: 0;
+border: none;
+box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+color: #444;
+font-family:'Work Sans';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background-color: white;
+}
+
+#projectCategory{
+	cursor: pointer;
+}
+
+.gallery__item-modale img {
+	height:120px;
+	width: auto;
+}
+
+.js-admin-projets {    
+    margin: 46px auto;
+    display: grid;
+	width: 80%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	padding-bottom: 46px;
+	gap: 8px;
+	border-bottom: 1px solid #B3B3B3;
+}
+
+.select-barre {
+	display: grid;
+}
+
+.fa-trash-can {
+    color: #FFF;
+    background-color: black;
+    width: auto;
+    height: auto;
+    font-size: x-small;
+    padding: 5px;
+    position: absolute; 
+	border-radius: 2px;
+	bottom: 110px;
+    left: 65px;
+    cursor: pointer;
+}
+
+.fa-up-down-left-right{
+    color: #FFF;
+    background-color: black;
+    font-size: x-small;
+    padding: 5px;
+    position: absolute;
+	bottom: 110px;
+	left: 42px;
+	cursor: pointer;
+}
+
+.gallery__item-modale {
+    position: relative;
+    /* autres propriétés... */
+}
+
+
+
+button[type="button"] {
+	width: 173px;
+	height: 36px;
+	border-radius: 50px;
+	background: #CBD6DC;
+	display: grid;
+	align-items: center;
+	color: #306685;
+	text-align: center;
+	font-family:'Work Sans';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	border: none;
+	cursor: pointer;
+}
+
+.projectImage {
+	display: none;;
+}
+
+.add-img {
+	display: grid;
+	grid-template-columns: 1fr;
+	border-radius: 3px;
+	background: #E8F1F6;
+	width: 382px;
+	height: 169px;	
+	padding: 13px  19px ;
+	margin: 36px 75px 30px;
+	justify-items: center;
+}
+
+.add-img img {
+    width: 129px;
+    height: 169px; 
+    display: block;
+    margin: auto;
+	object-fit: cover;
+}
+
+#addProjectForm .fa-image {
+    font-size: 76px;
+	color: #B9C5CC;
+}
+
+
+
+.btn-clear-admin {
+	display: grid;
+	justify-content: center;
+	color: #D65353;
+text-align: center;
+font-family: Syne;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.js-modale-projet {
+	display: grid;
+	width: 237px;
+	height: 36px;
+	align-items: center;
+}
+
+
+.button-add {
+	width: 237px;
+	height: 36px;
+	cursor: pointer;
+    font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	margin: 32px auto 0px;
+	text-align: center;
+	border-radius: 60px ;
+	border: none;
+	background-color: #A7A7A7;
+}
+
+.fa-arrow-left, .fa-xmark {
+	cursor: pointer;
+}
+
+
+
