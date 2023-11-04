@@ -402,13 +402,6 @@ defaultOption.hidden = true;
 
 document.getElementById('projectCategory').insertBefore(defaultOption, document.getElementById('projectCategory').firstChild);
 
-
-
-// Poste un nouveau projet à l'API lors de la soumission du formulaire
-// ... (le reste de votre code reste inchangé)
-
-// ... (le reste de votre code reste inchangé)
-
 // Supprimez les écouteurs d'événements qui vérifient la validité à chaque modification de champ.
 document.querySelector('.projectImage').removeEventListener('change', checkAllFieldsFilled);
 document.getElementById('projectTitle').removeEventListener('input', checkAllFieldsFilled);
@@ -418,12 +411,8 @@ document.getElementById('addProjectForm').addEventListener('submit', function(e)
     e.preventDefault();
 
     if (!checkAllFieldsFilled()) { // Si la fonction retourne "false", cela signifie qu'il y a une erreur
-        // Ne faites rien, car le message d'erreur sera déjà affiché par la fonction checkAllFieldsFilled
     } else {
-        // Ici, vous pouvez continuer avec le traitement de votre formulaire
-        // par exemple, en envoyant les données au serveur si tout est valide.
-
-        // Vous aviez déjà un code pour envoyer le projet à l'API, alors je l'ai inclus ici.
+        
         const imageFile = document.querySelector('.projectImage').files[0];
         const title = document.getElementById('projectTitle').value;
         const category = document.getElementById('projectCategory').value;
@@ -478,7 +467,6 @@ function checkAllFieldsFilled(e) {
             errorMessage = 'Merci de choisir une catégorie.';
         }
     }
-    
     
     // Si l'événement provient du champ de titre ou si ce n'est pas un événement
     if (!e || e.target.id === 'projectTitle') {
